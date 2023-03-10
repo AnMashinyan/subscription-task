@@ -1,4 +1,4 @@
-Run git clone https://github.com/AnMashinyan/
+Run git clone https://github.com/AnMashinyan/subscription-task.git
 
 Run composer install
 
