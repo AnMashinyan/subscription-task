@@ -1,17 +1,12 @@
 <?php
-
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Content;
-use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
-use App\Models\Post;
 use Illuminate\Support\Facades\DB;
 
-class DemoMail extends Mailable
+class Demomail extends Mailable
 {
     use Queueable, SerializesModels;
     public $mailData;
@@ -25,6 +20,6 @@ class DemoMail extends Mailable
     {
         $post = DB::table('posts')->latest('id')->first();
         return $this->subject('SenderController from ItSolutionStuff.com')
-            ->view('emails.demoMail',compact('post'));
+        ->view('emails.demoMail',compact('post'));
     }
 }
