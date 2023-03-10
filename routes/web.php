@@ -20,9 +20,3 @@ use App\Mail\Demomail;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::prefix('website')->group(function () {
-    Route::get('/', [WebsiteController::class, 'index']);
-    Route::get('/create', [WebsiteController::class, 'create']);
-    Route::get('/delete', [WebsiteController::class, 'delete']);
-
-});
