@@ -1,6 +1,5 @@
 <?php
 
-use App\Http\Controllers\EmailController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\SubscriberController;
 use App\Http\Middleware\WebsiteController;
@@ -41,6 +40,7 @@ Route::prefix('subscribe')->group(function () {
     Route::post('/create', [SubscriberController::class, 'create']);
     Route::get('/delete', [SubscriberController::class, 'delete']);
 });
+
 
 
 
